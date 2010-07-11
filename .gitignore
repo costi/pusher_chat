@@ -1,3 +1,4 @@
-config/pusher.rb
+config/my_pusher_config.rb
+db/*.sqlite3
 log/*.log
 tmp/**/*

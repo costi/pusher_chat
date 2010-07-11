@@ -1,6 +1,4 @@
 class MessagesController < ApplicationController
-
-
   # GET /messages
   # GET /messages.xml
   def index
@@ -52,13 +50,18 @@ class MessagesController < ApplicationController
         format.xml  { render :xml => @message, :status => :created, :location => @message }
         format.js { 
           render(:update) { |page| 
-            # page.alert("message saved as #{@message.body}")
+            # clear the text field like a normal chat app will do
+            page["message_body"].value  = ''
           } 
         }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @message.errors, :status => :unprocessable_entity }
-        format.js
+        format.js {
+          render(:update) { |page| 
+            page.alert("message not saved because #{@message.errors.full_messages.inspect}")
+          }
+        }
       end
     end
   end
