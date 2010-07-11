@@ -1,0 +1,20 @@
+
+<h1>Chat away</h1>
+<ul id="chat_messages">
+  <%@messages.each do |message|%>
+    <li><%=h message.body%></li>
+  <%end%>
+</ul>
+
+
+<% remote_form_for(@message) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :body, "Your message" %>
+    <%= f.text_field :body %>
+    <%= f.submit 'Send' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', messages_path %>
