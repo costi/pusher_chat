@@ -56,5 +56,6 @@ a:hover { color: #fff; background-color:#000; }
 #chat_messages {
   height: 200px;
   overflow-y: scroll;
+  border: solid 1px;
 }
 
