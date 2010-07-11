@@ -1,1 +1,19 @@
-doc/README_FOR_APP
+Chat with pusherapp and websockets
+=====
+
+This is an rails 2.2 chat app using websockets made ar ruby hack night 
+at enova financial on 8 july 2010. Thanks for providing the space, beer and pizza!
+Thanks to Fred and Neal who worked with me at the same time. We all got a working
+app at the same time which was pretty cool. Pairing on separate computers :)
+
+It uses pusherapp and the pusher gem to broadcast messages, so no AJAX polling!
+
+How to use
+=====
+
+Make an account at pusherapp.com
+Rename and edit config/my_pusher_config.rb.example
+Create an app on your pusher dashboard called "messages"
+Install the missing gems (rake gems:install should work)
+Fire up the server and use Chrome or Safari to use websockets.
+
