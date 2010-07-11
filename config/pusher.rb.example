@@ -1,0 +1,8 @@
+# This is the config file for pusher
+# change these values according to your pusher settings
+# http://pusherapp.com/docs/quickstart
+Pusher.app_id = 'some digits'
+Pusher.key = 'a hex key'
+Pusher.secret = 'a hex key'
+Pusher.logger = Rails.logger
+
