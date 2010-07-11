@@ -2,8 +2,9 @@
 # change these values according to your pusher settings
 # rename it to remove .example
 # http://pusherapp.com/docs/quickstart
-Pusher.app_id = 'some digits'
-Pusher.key = 'a hex key'
-Pusher.secret = 'a hex key'
+# http://github.com/newbamboo/pusher-gem
+Pusher.app_id = 'your-pusher-app-id'
+Pusher.key = 'your-pusher-key'
+Pusher.secret = 'your-pusher-secret'
 Pusher.logger = Rails.logger
 

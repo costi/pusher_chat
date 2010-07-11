@@ -7,7 +7,7 @@
   <title>Messages: <%= controller.action_name %></title>
   <%= stylesheet_link_tag 'scaffold' %>
   <%=  javascript_include_tag 'prototype' %>
-  <script src="http://js.pusherapp.com/1.4/pusher.min.js"></script>
+  <%= javascript_include_tag "http://js.pusherapp.com/1.4/pusher.min.js" %>
 </head>
 <body>
 
@@ -16,7 +16,7 @@
 <%= yield %>
 
 <script type="text/javascript">
-  var server = new Pusher('13598c0465e342dd7757', 'chatroulette');
+  var server = new Pusher('<%=Pusher.key%>', 'chatroulette');
   server.bind('message-create', function(message) {
       var li = '<li>' + message.body + '</li>';
       $('chat_messages').insert({

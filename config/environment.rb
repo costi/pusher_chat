@@ -41,4 +41,5 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
   
 end
-  require 'config/my_pusher_config'
+
+require 'config/my_pusher_config'
