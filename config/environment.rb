@@ -40,9 +40,5 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
   
-  Pusher.app_id = '1472'
-  Pusher.key = '13598c0465e342dd7757'
-  Pusher.secret = 'a93d156664c3429dee39'
-  Pusher.logger = Rails.logger
-
 end
+  require 'config/my_pusher_config'
