@@ -13,5 +13,7 @@ How to use
 
 Make an account at pusherapp.com
 Rename and edit config/my_pusher_config.rb.example
-Install the missing gems (rake gems:install should work).
+Create an app on your pusher dashboard called "messages"
+Install the missing gems (rake gems:install should work)
+Fire up the server and use Chrome or Safari to use websockets.
 

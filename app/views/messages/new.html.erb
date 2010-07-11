@@ -1,5 +1,30 @@
+<h1>Websockets chat</h1>
 
-<h1>Chat away</h1>
+<p>
+  See <a href="http://www.pusherapp.com">pusherapp</a> - we're using their service.
+  See <a href="http://github.com/costi/pusherchat">pusher chat on github</a> 
+  to get the source code for this website.
+  </p>
+
+  <h2>How it works</h2>
+  <ol>
+    <li>
+      When the a supported browser first connects it opens a websocket connection with pusherapp.com.
+    </li>
+    <li>
+      When you press send the browser sends the message to the rails server through AJAX. 
+    </li>
+    <li>
+      The server notifies pusherapp.com that a new message was created. 
+    </li>
+    <li>
+      Pusherapp sends to all browsers connected an event with the new message.
+    </li>
+    <li>
+      All clients (browsers) update their chat window.
+    </li>
+  </ol>
+
 <ul id="chat_messages">
   <%@messages.each do |message|%>
     <li><%=h message.body%></li>
@@ -12,7 +37,7 @@
 
   <p>
     <%= f.label :body, "Your message" %>
-    <%= f.text_field :body %>
+    <%= f.text_field :body, :size => 50 %>
     <%= f.submit 'Send' %>
   </p>
 <% end %>
